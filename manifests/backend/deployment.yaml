@@ -21,9 +21,9 @@ spec:
       containers:
         - name: saas-backend
 
-          image: rks1947/saas-multi-tenant-app:17
+          image: rks1947/saas-multi-tenant-app:latest
 
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
 
           ports:
             - containerPort: 8080
