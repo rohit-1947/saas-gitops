@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: saas-backend
+  namespace: saas-app
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: saas-backend
+
+  template:
+    metadata:
+      labels:
+        app: saas-backend
+
+    spec:
+      containers:
+        - name: saas-backend
+
+          image: rohit1947/saas-multi-tenant-app:latest
+
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 8080
+
+          env:
+            - name: DB_URL
+              value: jdbc:postgresql://postgres-saas-db:5432/saas-app-db
+
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: POSTGRES_USER
+
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: POSTGRES_PASSWORD

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: postgres-saas-db
+  namespace: saas-app
+
+spec:
+  selector:
+    app: postgres-saas-db
+
+  ports:
+    - port: 5432
+      targetPort: 5432
+
+  type: ClusterIP

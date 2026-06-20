@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: saas-frontend
+  namespace: saas-app
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: saas-frontend
+
+  template:
+    metadata:
+      labels:
+        app: saas-frontend
+
+    spec:
+      containers:
+        - name: saas-frontend
+
+          image: rohit1947/saas-multi-tenant-app-ui:latest
+
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 80
