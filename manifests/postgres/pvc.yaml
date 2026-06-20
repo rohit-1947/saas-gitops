@@ -3,11 +3,10 @@ kind: PersistentVolumeClaim
 metadata:
   name: postgres-pvc
   namespace: saas-app
-
 spec:
   accessModes:
     - ReadWriteOnce
-
+  storageClassName: standard
   resources:
     requests:
       storage: 2Gi
