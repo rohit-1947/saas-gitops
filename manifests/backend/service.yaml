@@ -6,11 +6,12 @@ metadata:
   namespace: saas-app
 
 spec:
+  type: NodePort
+
   selector:
     app: saas-backend
 
   ports:
     - port: 8080
       targetPort: 8080
-
-  type: ClusterIP
+      nodePort: 30081
