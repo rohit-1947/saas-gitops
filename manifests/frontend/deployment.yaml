@@ -21,7 +21,7 @@ spec:
       containers:
         - name: saas-frontend
 
-          image: rks1947/saas-multi-tenant-app-ui:27
+          image: rks1947/saas-multi-tenant-app-ui:28
 
           imagePullPolicy: IfNotPresent
 

@@ -21,7 +21,7 @@ spec:
       containers:
         - name: saas-backend
 
-          image: rks1947/saas-multi-tenant-app:26
+          image: rks1947/saas-multi-tenant-app:27
 
           imagePullPolicy: IfNotPresent
 
