@@ -3,11 +3,13 @@ kind: Kustomization
 
 resources:
   - namespace/namespace.yaml
+
   - postgres/secret.yaml
-  - postgres/pvc.yaml
-  - ls -R manifests/postgres
   - postgres/service.yaml
+  - postgres-statefulset.yaml
+
   - backend/deployment.yaml
   - backend/service.yaml
+
   - frontend/deployment.yaml
   - frontend/service.yaml
