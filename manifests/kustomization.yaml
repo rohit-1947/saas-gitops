@@ -5,7 +5,7 @@ resources:
   - namespace/namespace.yaml
   - postgres/secret.yaml
   - postgres/pvc.yaml
-  - postgres/deployment.yaml
+  - ls -R manifests/postgres
   - postgres/service.yaml
   - backend/deployment.yaml
   - backend/service.yaml
