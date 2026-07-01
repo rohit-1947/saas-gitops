@@ -6,7 +6,7 @@ resources:
 
   - postgres/secret.yaml
   - postgres/service.yaml
-  - postgres-statefulset.yaml
+  - postgres/postgres-statefulset.yaml
 
   - backend/deployment.yaml
   - backend/service.yaml

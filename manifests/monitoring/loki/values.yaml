@@ -1,0 +1,16 @@
+#Log Storage
+deploymentMode: SingleBinary
+
+loki:
+  auth_enabled: false
+
+singleBinary:
+  replicas: 1
+
+gateway:
+  enabled: false
+
+monitoring:
+  selfMonitoring:
+    enabled: false
+
