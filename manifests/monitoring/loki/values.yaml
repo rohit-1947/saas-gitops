@@ -34,3 +34,9 @@ gateway:
 monitoring:
   selfMonitoring:
     enabled: false
+
+chunksCache:
+  enabled: false
+
+resultsCache:
+  enabled: false
