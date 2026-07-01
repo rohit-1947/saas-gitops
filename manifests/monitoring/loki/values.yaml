@@ -36,7 +36,11 @@ monitoring:
     enabled: false
 
 chunksCache:
-  enabled: false
+  enabled: true
+  allocatedMemory: 128
+  allocatedCPU: 100m
 
 resultsCache:
-  enabled: false
+  enabled: true
+  allocatedMemory: 64
+  allocatedCPU: 100m
